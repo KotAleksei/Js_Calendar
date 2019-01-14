@@ -10,10 +10,10 @@ body{
 }
 .mainContent {
 	display: block;
-	min-width: 320px;
+	min-width: 300px;
 	max-width: 400px;
 	text-align: center;
-	margin: 200px auto;
+	margin: 20vh auto;
 	background-color: #1b363f;
 	margin-bottom: 0;
 	color: white;
@@ -24,7 +24,7 @@ body{
 	display: grid;
 	margin: 0 auto;
 	list-style: none;
-	min-width: 320px;
+	min-width: 300px;
 	max-width: 400px;
 	grid-template-areas: "Monday Thusday Wensday Thurthday Friday Saturday Sunday";
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -46,7 +46,7 @@ body{
 		"Day29 Day30 Day31 Day32 Day33 Day34 Day35"
 		"Day36 Day37 Day38";
 	max-width: 400px;
-	min-width: 320px;
+	min-width: 300px;
 	min-height: 300px;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
