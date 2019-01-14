@@ -11,8 +11,6 @@ function createMonth(year1,month1,day1) {
 	let textMonth = date.toLocaleString('ru',{month: 'long'})[0].toUpperCase() + date.toLocaleString('ru',{month: 'long'}).slice(1);
 	let lastDay = new Date(year,month+1,0).getDate(); // для получения последнего числа в месяце
 	let day_Of_Week_First_Day_In_Month = new Date(year,month,1).getDay(); // для получения дня недели первого дня месяца
-	let firstDayNextMonth = new Date(year,++month,1).getDay();
-	let firstDayPrevMonth = new Date(year,--month,1).getDay();
 	
 	
 
@@ -37,7 +35,6 @@ function createMonth(year1,month1,day1) {
 	ulDays.className = 'daysOfMonth';
 	itMonth.className = 'mainContent';
 
-	// console.log(firstDayNextMonth);
 	arrowRight.addEventListener('click', function () {
 		div.remove();
 		itMonth.remove();
@@ -46,7 +43,7 @@ function createMonth(year1,month1,day1) {
 	arrowLeft.addEventListener('click', function () {
 		div.remove();
 		itMonth.remove();
-		createMonth(year,--month,firstDayPrevMonth);
+		createMonth(year,--month,today);
 	});
 																// создание дней недели 
 	let arrryOfWeekands = ['Пн','Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
@@ -72,7 +69,7 @@ for(let i = 0; i < 7; i++){
 			li.innerHTML = '&nbsp';
 		else 
 			li.innerHTML = start++;
-		if(dayGlobal == today && today == i)
+		if(dayGlobal == today && monthGlobal == month && today == i &&  yearGlobal == year)
 			li.className = 'today';
 		ulDays.append(li);
 	}
